@@ -23,6 +23,10 @@ body {
 nav {
     padding-left: 2rem;
     padding-bottom: 2.5rem;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .logo {
@@ -41,7 +45,45 @@ nav h2:nth-of-type(2) {
     line-height: 0.3rem;
 }
 
-nav h2, .topic h2, footer p {
+nav ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--dark-mode-header-color);
+}
+
+nav li {
+    position: relative;
+}
+
+nav li::before, nav li::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0.3rem;
+    background-color: var(--dark-mode-header-color);
+    border-radius: 3px;
+    transition: width 0.7s ease;
+}
+
+nav li::before {
+    top: -0.5rem;
+    left: 0;
+}
+
+nav li::after {
+    bottom: -0.5rem;
+    right: 0;
+}
+
+nav li:hover::before, nav li:hover::after {
+    width: 100%;
+}
+
+nav, .topic h2, footer p {
     color: var(--dark-mode-header-color);
 }
 
@@ -53,7 +95,7 @@ header, .sub-topic {
 header {
     display: flex;
     justify-content: center;
-    align-itrems: center;
+    align-items: center;
     margin: 0 -1rem;
     padding: 2rem 0;
 }

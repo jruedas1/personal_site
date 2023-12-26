@@ -17,12 +17,12 @@ body {
 }
 
 .page-wrapper {
-    margin: 1em;
+    margin: 1rem;
 }
 
 nav {
-    padding-left: 2em;
-    padding-bottom: 2.5em;
+    padding-left: 2rem;
+    padding-bottom: 2.5rem;
 }
 
 .logo {
@@ -32,13 +32,13 @@ nav {
 nav h2 {
     font-family: 'Cinzel Decorative', serif;
     font-weight: 900;
-    font-size: 4em;
+    font-size: 4rem;
 }
 
 nav h2:nth-of-type(2) {
     position: relative;
-    left: 0.3em;
-    line-height: 0.3em;
+    left: 0.3rem;
+    line-height: 0.3rem;
 }
 
 nav h2, .topic h2, footer p {
@@ -53,31 +53,31 @@ header, .sub-topic {
 header {
     display: flex;
     justify-content: center;
-    align-items: center;
-    margin: 0 -1em;
-    padding: 2em 0;
+    align-itrems: center;
+    margin: 0 -1rem;
+    padding: 2rem 0;
 }
 
 header h1 {
     font-family: Montserrat, sans-serif;
     font-weight: 700;
-    font-size: 3.5em;
+    font-size: 3.5rem;
 }
 
 main {
     display: flex;
     flex-flow: row wrap;
-    gap: 1em;
+    gap: 1rem;
     justify-content: center;
-    align-items: start;
-    padding: 1em;
+    align-itrems: start;
+    padding: 1rem;
 }
 
 .topic, .sub-topic {
-    flex-basis: calc((100%/3) - 3em);
+    flex-basis: calc((100%/3) - 3rem);
     text-align: center;
     border-radius: 63px;
-    padding: 2em 1em;
+    padding: 2rem 1rem;
 }
 
 .topic h2, .sub-topic h2 {
@@ -94,7 +94,7 @@ main {
 }
 
 .topic h2 {
-    font-size: 2.5em;
+    font-size: 2.5rem;
 }
 
 .topic img {
@@ -106,22 +106,22 @@ main {
     display: flex;
     flex-flow: column nowrap;
     justify-content: space-evenly;
-    padding: 2em 1em;
+    padding: 2rem 1rem;
 }
 
-p {
+p, li {
     font-family: Hind, sans-serif;
 }
 
 footer {
     text-align: center;
-    padding: 2em 0;
+    padding: 2rem 0;
 }
 
 
 @media screen and (max-width: 992px){
     .topic, .sub-topic {
-        flex-basis: calc((100%/2) - 3em);
+        flex-basis: calc((100%/2) - 3rem);
     }
 }
 
@@ -133,7 +133,7 @@ footer {
 
 @media screen and (max-width: 600px){
     .topic, .sub-topic {
-        flex-basis: calc(100% - 2em);
+        flex-basis: calc(100% - 2rem);
     }
 }
 

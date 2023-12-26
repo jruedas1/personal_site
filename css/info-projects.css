@@ -8,34 +8,52 @@ main .sub-topic {
     justify-content: unset;
     position: relative;
     height: 60dvh;
-    padding-bottom: 2em;
+    padding-bottom: 2rem;
     transition: height ease 0.5s;
 }
 
+/* This toggles off when the section is expanded
+    I put it in a class so as to make it simpler to toggle
+    This is applied not to the whole subtopic div, but
+    to the content within that div
+*/
 .opacityGradient {
     mask-image: linear-gradient(rgba(0,0,0,1) 65%, transparent 100%);
 }
 
+/* The subtopic content is limited in height relative
+    to its parent, otherwise the gradient is not visible
+    as it applies to content that overflows its parent
+*/
+
 main .sub-topic .sub-topic-content {
-    height: 90%;
+    height: 95%;
 }
 
 main .sub-topic h2 {
-    padding-bottom: 0.8em;
+    padding-bottom: 0.8rem;
 }
 
 main .sub-topic p {
     text-align: left;
-    margin-bottom: 1em;
+    margin-bottom: 1rem;
+}
+
+main .sub-topic li {
+    margin-left: 1rem;
 }
 
 main .sub-topic img.toggleIcon {
-    width: 3em;
-    height: 3em;
+    width: 3rem;
+    height: 3rem;
     position: absolute;
-    left: calc(50% - 1.5em);
+    left: calc(50% - 1.5rem);
     cursor: pointer;
-    bottom: 2em;
+    bottom: 2rem;
     transition: bottom ease 0.5s;
+}
+
+img {
+    max-width: 100%;
 }
 

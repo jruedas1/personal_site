@@ -1,0 +1,41 @@
+/* The inherited justify-content for sub-topics is
+  space-evenly, but with the settings here that
+  has the effect of cutting off the top, so we
+  reset it to default */
+
+main .sub-topic {
+    overflow: hidden;
+    justify-content: unset;
+    position: relative;
+    height: 60dvh;
+    padding-bottom: 2em;
+    transition: height ease 0.5s;
+}
+
+.opacityGradient {
+    mask-image: linear-gradient(rgba(0,0,0,1) 65%, transparent 100%);
+}
+
+main .sub-topic .sub-topic-content {
+    height: 90%;
+}
+
+main .sub-topic h2 {
+    padding-bottom: 0.8em;
+}
+
+main .sub-topic p {
+    text-align: left;
+    margin-bottom: 1em;
+}
+
+main .sub-topic img.toggleIcon {
+    width: 3em;
+    height: 3em;
+    position: absolute;
+    left: calc(50% - 1.5em);
+    cursor: pointer;
+    bottom: 2em;
+    transition: bottom ease 0.5s;
+}
+

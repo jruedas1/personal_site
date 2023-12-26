@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap"');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&display=swap"');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --dark-mode-header-color: #E8E0E0;
+    --main-background: #151122;;
+}
+
+body {
+    background-color: var(--main-background);
+}
+
+.page-wrapper {
+    margin: 1em;
+}
+
+nav {
+    padding-left: 2em;
+    padding-bottom: 2.5em;
+}
+
+.logo {
+    cursor: pointer;
+}
+
+nav h2 {
+    font-family: 'Cinzel Decorative', serif;
+    font-weight: 900;
+    font-size: 4em;
+}
+
+nav h2:nth-of-type(2) {
+    position: relative;
+    left: 0.3em;
+    line-height: 0.3em;
+}
+
+nav h2, .topic h2, footer p {
+    color: var(--dark-mode-header-color);
+}
+
+header, .sub-topic {
+    background-color: #FFF;
+    opacity: 66%;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 -1em;
+    padding: 2em 0;
+}
+
+header h1 {
+    font-family: Montserrat, sans-serif;
+    font-weight: 700;
+    font-size: 3.5em;
+}
+
+main {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 1em;
+    justify-content: center;
+    align-items: start;
+    padding: 1em;
+}
+
+.topic, .sub-topic {
+    flex-basis: calc((100%/3) - 3em);
+    text-align: center;
+    border-radius: 63px;
+    padding: 2em 1em;
+}
+
+.topic h2, .sub-topic h2 {
+    font-family: Montserrat, sans-serif;
+    font-weight: bold;
+}
+
+.topic {
+    background-color: #37314B;
+    border: 1px solid #52436F;
+    border-radius: 63px;
+    box-shadow: 0 -4px 4px 0 #EBE7F2, 0 8px 4px 0 rgba(240, 231, 231, 0.25);;
+    cursor: pointer;
+}
+
+.topic h2 {
+    font-size: 2.5em;
+}
+
+.topic img {
+    width: 100%;
+}
+
+.sub-topic {
+    align-self: stretch;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+    padding: 2em 1em;
+}
+
+p {
+    font-family: Hind, sans-serif;
+}
+
+footer {
+    text-align: center;
+    padding: 2em 0;
+}
+
+
+@media screen and (max-width: 992px){
+    .topic, .sub-topic {
+        flex-basis: calc((100%/2) - 3em);
+    }
+}
+
+@media screen and (max-width: 768px){
+    header h1 {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .topic, .sub-topic {
+        flex-basis: calc(100% - 2em);
+    }
+}
+
+
+
+

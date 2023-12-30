@@ -32,6 +32,7 @@ main .sub-topic .sub-topic-content {
 
 main .sub-topic h2 {
     padding-bottom: 0.8rem;
+    text-transform: uppercase;
 }
 
 main .sub-topic p {

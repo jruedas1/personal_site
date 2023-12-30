@@ -1,5 +1,12 @@
 const toggleIcons = document.querySelectorAll(".toggleIcon");
 
+
+/* The general strategy taken here for expanding the section is
+* derived from https://css-tricks.com/using-css-transitions-auto-dimensions/
+* since each section has a different end height, we use JS to calculate
+* how far each section has to expand. The result is a bit imprecise but
+*  good enough
+*/
 const expandSection = event => {
     const wrappingDiv = event.target.parentElement;
     const contentDiv = event.target.parentElement.firstElementChild;
@@ -24,6 +31,7 @@ const expandSection = event => {
     event.target.style.bottom = "1rem";
     contentDiv.classList.remove("opacityGradient");
     event.target.src = "img/close.svg";
+    /* switch the event listener attached to the icon */
     event.target.removeEventListener('click', expandSection);
     event.target.addEventListener('click', collapseSection);
 }
@@ -42,6 +50,8 @@ const collapseSection = event => {
 
 toggleIcons.forEach(icon => icon.addEventListener('click', expandSection));
 
+
+// This code comes from: https://brokul.dev/detecting-the-default-browser-font-size-in-javascript
 const getDefaultFontSize = () => {
     const element = document.createElement('div');
     element.style.width = '1rem';

@@ -8,3 +8,4 @@ const goToInfoExperience = e => location.href = "info-experience.html";
 
 infoCoursework.addEventListener('click', goToInfoCoursework);
 infoProjects.addEventListener('click', goToInfoProjects);
+infoExperience.addEventListener('click', goToInfoExperience);

@@ -1,0 +1,61 @@
+#info-ed {
+    width: 100%;
+}
+
+.degree {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.degree p, h2, li {
+    color: var(--dark-mode-header-color);
+}
+
+.degree-info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-basis: 33%;
+}
+
+.degree-info.degree-university {
+    justify-content: center;
+}
+
+.degree-info.degree-place {
+    justify-content: flex-end;
+}
+
+#info-experience {
+    padding-top: 2rem;
+}
+
+.job h2 {
+    font-family: Montserrat, sans-serif;
+}
+
+.job-responsibilities ul {
+    margin: 1.5rem 1rem 1.5rem 3rem;
+}
+
+@media screen and (max-width: 600px){
+    .degree {
+        flex-flow: column nowrap;
+    }
+
+    .degree-info.degree-type {
+        justify-content: center
+    }
+
+    .degree-place {
+        display: none;
+    }
+
+    .degree:first-of-type p:nth-of-type(2) {
+        text-decoration: underline;
+        text-underline-offset: 1em;
+        padding-bottom: 1em;
+    }
+
+
+}

@@ -111,7 +111,7 @@ main {
     flex-flow: row wrap;
     gap: 1rem;
     justify-content: center;
-    align-itrems: start;
+    align-items: start;
     padding: 1rem;
 }
 

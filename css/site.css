@@ -133,10 +133,13 @@ main {
     border-radius: 63px;
     box-shadow: 0 -4px 4px 0 #EBE7F2, 0 8px 4px 0 rgba(240, 231, 231, 0.25);;
     cursor: pointer;
+    overflow: hidden;
+    height: 75vh;
 }
 
 .topic h2 {
     font-size: 2.5rem;
+    padding-bottom: 0.8em;
 }
 
 .topic img {
@@ -178,7 +181,6 @@ footer {
         flex-basis: calc(100% - 2rem);
     }
 }
-
 
 
 

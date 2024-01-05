@@ -1,0 +1,18 @@
+main {
+    padding-top: 3rem;
+}
+
+div.sub-topic {
+    flex-basis: calc(100% - 4rem);
+    padding: 1.7rem 2rem;
+}
+
+
+div.sub-topic p {
+    text-align: left;
+    margin-bottom: 0.5em;
+}
+
+div.sub-topic p:last-of-type {
+    margin-bottom: 0;
+}

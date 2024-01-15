@@ -1,0 +1,3 @@
+.sub-topic {
+    flex-basis: calc((100%/2) - 3rem);
+}

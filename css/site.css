@@ -83,7 +83,7 @@ nav li:hover::before, nav li:hover::after {
     width: 100%;
 }
 
-nav, .topic h2, footer p {
+nav, .topic h2, footer p, .in-progress-warning {
     color: var(--dark-mode-header-color);
 }
 
@@ -161,6 +161,10 @@ p, li {
 footer {
     text-align: center;
     padding: 2rem 0;
+}
+
+.in-progress-warning {
+    text-align: center;
 }
 
 

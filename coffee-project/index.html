@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Coffee Project</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rosarivo">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
+    <link rel="stylesheet" href="css/fontawesome-css/all.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+    <h1><span>Javier</span><span>Coffee</span></h1>
+</header>
+<form>
+    <label for="coffee-search" class="fa fa-magnifying-glass"> </label>
+    <input type="text" id="coffee-search" placeholder="Browse your favorite coffee...">
+</form>
+<main class="row">
+    <div id="roast-search">
+        <ul>
+            <li class="selected">All</li>
+            <li>Light</li>
+            <li>Medium</li>
+            <li>Dark</li>
+        </ul>
+    </div>
+    <div id="coffees"></div>
+</main>
+
+<div id="addCoffeeModalWrapper" class="hideModal">
+    <h2>Add a Coffee!</h2>
+    <form id="addCoffeeForm">
+        <label for="add-coffee-roast">Roast:</label>
+        <select id="add-coffee-roast">
+            <option>light</option>
+            <option>medium</option>
+            <option>dark</option>
+        </select>
+        <label for="add-coffee-name">Name:</label>
+        <input type="text" id="add-coffee-name">
+        <input type="submit" id="add-coffee" value="Submit">
+    </form>
+</div>
+
+<footer>
+    <nav>
+        <ul>
+            <li><p>&plus;</p></li>
+        </ul>
+    </nav>
+</footer>
+<script src="js/main.js"></script>
+</body>
+</html>

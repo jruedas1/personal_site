@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Dev Projects</title>
+    <link rel="stylesheet" href="css/site.css">
+    <link rel="stylesheet" href="css/info-projects.css">
+    <link rel="stylesheet" href="css/anthro-projects.css">
+</head>
+<body>
+<div class="page-wrapper">
+    <nav>
+        <div class="logo">
+            <h2>Javier</h2>
+            <h2>Ruedas</h2>
+        </div>
+        <div class="nav-links">
+            <ul>
+                <li><a href="webdev.html">Web Dev</a></li>
+            </ul>
+        </div>
+    </nav>
+    <header>
+        <h1>WEB DEV PROJECTS</h1>
+    </header>
+    <main>
+        <div class="sub-topic">
+            <div class="sub-topic-content opacityGradient">
+                <h2>UI/UX EXPLORATION</h2>
+                <p>To improve my front-end UI/UX design and coding skills, I recently undertook to select a community project on Figma and work to translate it into code using custom CSS. I selected <a href="https://www.figma.com/@Nickelfox">Nickelfox Design</a>'s <a href="https://www.figma.com/community/file/1050295107596166499/coffee-delivery-app-exploration">Coffee Delivery App Exploration, focusing on the Home Screen design.</a></p>
+                <a href="coffee-project/index.html"><img src="img/webdev-uiux-project.png" alt="image of a web page displaying coffee options along with a menu for sorting by roast, a search bar, and an icon to add a new coffee to the list."></a>
+                <p>I challenged myself to use custom CSS for a modal. The modal is triggered when the user clicks on the &plus; icon to add a coffee to the list. On click, a JavaScript event toggles the hideModal and showModal CSS classes. These classes change the modal opacity on a 0.5 second transition. When the modal is hidden, it is still there, but the <code>pointer-events:none</code> property means it cannot be interacted with.</p>
+                <p>Another challenge was to reproduce the sidebar with the text in left-to-right, bottom-to-top orientation, as if rotated 90 degrees counter-clockwise. I used <code>writing-mode: vertical-lr;</code> combined with a 180-degree rotation transform to realize this design in practice.</p>
+                <p>There is plenty to learn from this project, in particular I have not added images yet, but plan to do so in the future.</p>
+                <p>To see the project and interact with it, please click on the image above. You can see the code on its <a href="https://github.com/jruedas1/coffee-project-2023">GitHub repo.</a></p>
+            </div>
+            <img src="img/expand.svg" alt="expand section" class="toggleIcon">
+        </div>
+        <div class="sub-topic">
+            <div class="sub-topic-content opacityGradient">
+                <h2>API INTEGRATION</h2>
+                <p></p>
+            </div>
+            <img src="img/expand.svg" alt="expand section" class="toggleIcon">
+        </div>
+    </main>
+    <footer><p>&copy;2023 Javier Ruedas</p></footer>
+</div>
+<script src="js/main.js"></script>
+<script src="js/infoProjects.js"></script>
+</body>
+</html>

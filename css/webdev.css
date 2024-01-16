@@ -26,6 +26,15 @@ main .topic.resume {
     flex-basis: calc(33% - 3rem);
 }
 
+.examples {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: row nowrap;
+    flex: 0 0 50%;
+    gap: 2rem;
+}
+
 @media screen and (max-width: 992px){
    main .topic.resume, main .topic.about-me {
         flex-grow: 0;

@@ -1,0 +1,119 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Helvetica Neue", Helvetica, sans-serif;
+}
+
+header {
+    background-color: #0080ff;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+}
+
+form {
+    margin: 15px 0 0 0;
+    padding-left: 15px;
+    width: 24%;
+}
+
+form label {
+    font-size: .8rem;
+}
+
+form input  {
+    font-size: .7rem;
+}
+
+form input[type="text"]{
+    width: 38%;
+}
+
+form input[type="submit"] {
+    background-color: #0080ff;
+    color: white;
+    padding: 4px 8px;
+    border: none;
+    border-radius: 3px;
+    margin-left: 10px;
+}
+
+header h1 {
+    font-size: 1.5rem;
+    font-weight: 300;
+    padding: 5px 0 5px 18px;
+    margin: 0;
+}
+
+header p {
+    font-size: 0.8rem;
+    padding-right: 15px;
+    margin: 0;
+}
+
+#weather {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 15px auto;
+    padding: 0;
+    width: calc(100% - 30px);
+    justify-content: space-around;
+}
+
+.weatherCard {
+    border: 1px solid gray;
+    border-radius: 5px;
+    margin: 0 10px;
+    flex: 1;
+}
+
+.weatherCard:first-of-type{
+    margin-left: 0;
+}
+
+.weatherCard:last-of-type {
+    margin-right: 0;
+}
+
+.weatherCard ul {
+    padding-left: 0;
+    margin: 0;
+}
+
+.weatherCard li {
+    list-style: none;
+    border-bottom: 1px solid gray;
+    font-size: 0.75rem;
+    padding: 5px 15px;
+}
+
+.weatherCard li:first-of-type {
+    background-color: lightgrey;
+    border-radius: 4px 4px 0 0;
+}
+
+.weatherCard li:first-of-type, .weatherCard li:nth-of-type(2), .weatherCard li:nth-of-type(3){
+    text-align: center;
+}
+
+.weatherCard li:nth-of-type(2), .weatherCard li:nth-of-type(4), .weatherCard li:last-of-type {
+    border-bottom: none;
+}
+
+.weatherCard li:last-of-type {
+    padding-bottom: 20px;
+}
+
+.weatherCard li span {
+    font-weight: bold;
+}
+
+#map {
+    margin: 0 auto;
+    width: calc(100% - 30px);
+    height: 300px;
+}

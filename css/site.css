@@ -122,9 +122,17 @@ main {
     padding: 2rem 1rem;
 }
 
-.topic h2, .sub-topic h2 {
+.topic h2, .sub-topic h2, .sub-topic h3 {
     font-family: Montserrat, sans-serif;
+}
+
+.topic h2, .sub-topic h2 {
     font-weight: bold;
+}
+
+.sub-topic h3 {
+    font-weight: normal;
+    margin-bottom: 1rem;
 }
 
 .topic {

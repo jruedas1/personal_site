@@ -1,0 +1,17 @@
+div.sub-topic {
+    flex-basis: calc(100% - 4rem);
+    height: 20dvh;
+    max-width: 1200px;
+}
+
+div.sub-topic h2 {
+    max-width: 80%;
+    margin: auto;
+}
+
+@media screen and (max-width: 600px){
+    div.sub-topic h2 {
+        max-width: 95%;
+        margin: auto;
+    }
+}

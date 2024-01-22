@@ -20,7 +20,7 @@ function getAndSetWeather(lat = SALat, long = SALong, scrollToMap = false){
             weatherCard.innerHTML = html;
             document.getElementById("weather").appendChild(weatherCard);
 
-            fetch(`https://api.openweathermap.org/data/2.5/forecast?lat=${SALat}&lon=${SALong}&appid=${OPEN_WEATHER_KEY}&units=imperial`).then(data => data.json())
+            fetch(`https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${long}&appid=${OPEN_WEATHER_KEY}&units=imperial`).then(data => data.json())
                 .then(forecast => {
                     console.log(forecast);
                     // In the forecasts I am getting the weather every three hours for forty instances (5 days)

@@ -88,8 +88,7 @@ nav, .topic h2, footer p, .in-progress-warning {
 }
 
 header, .sub-topic {
-    background-color: #FFF;
-    opacity: 66%;
+    background-color: rgb(191, 191, 197);
 }
 
 header {

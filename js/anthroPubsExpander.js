@@ -1,5 +1,5 @@
 const toggleIcons = document.querySelectorAll(".toggleIcon");
-
+const downloadButtons = document.querySelectorAll(".download-icon");
 
 /* The general strategy taken here for expanding the section is
 * derived from https://css-tricks.com/using-css-transitions-auto-dimensions/
@@ -10,6 +10,7 @@ const toggleIcons = document.querySelectorAll(".toggleIcon");
 const expandSection = event => {
     const wrappingDiv = event.target.parentElement.parentElement;
     const contentDiv = event.target.parentElement.parentElement.firstElementChild;
+    const downloadIcons = [event.target.previousElementSibling, event.target.nextElementSibling];
     /* this next allows the css transition to work.
     * since we start at 60dvh, we need the end point
     * of the transition to also be in dvh
@@ -27,9 +28,10 @@ const expandSection = event => {
     // default font size in dvh is
     const defaultFontSizeInDVH = getDefaultFontSize() / window.innerHeight * 100;
 
-    wrappingDiv.style.height = ((contentDiv.scrollHeight / window.innerHeight) * 100) + defaultFontSizeInDVH*3 + 'dvh';
+    wrappingDiv.style.height = ((contentDiv.scrollHeight / window.innerHeight) * 100) + defaultFontSizeInDVH*5 + 'dvh';
 
-    event.target.style.bottom = "1rem";
+    downloadIcons.forEach(icon => icon.style.opacity = 1);
+    event.target.style.bottom = "2rem";
     contentDiv.classList.remove("opacityGradient");
     event.target.src = "img/close.svg";
     /* switch the event listener attached to the icon */
@@ -40,9 +42,11 @@ const expandSection = event => {
 const collapseSection = event => {
     const wrappingDiv = event.target.parentElement.parentElement;
     const contentDiv = event.target.parentElement.parentElement.firstElementChild;
+    const downloadIcons = [event.target.previousElementSibling, event.target.nextElementSibling];
     /* we delete the inline style set by the expandSection function */
     wrappingDiv.style.height = null;
     event.target.style.bottom = null;
+    downloadIcons.forEach(icon => icon.style.opacity = 0);
     contentDiv.classList.add("opacityGradient");
     event.target.src = "img/expand.svg";
     event.target.removeEventListener('click', collapseSection);
@@ -73,3 +77,30 @@ const getDefaultFontSize = () => {
     const result = Number(widthMatch[0]);
     return !isNaN(result) ? result : null;
 };
+
+downloadButtons.forEach(button => button.addEventListener('click', event => {
+    let articleId;
+    if (event.target.nodeName==="IMG"){
+        articleId = event.target.parentElement.dataset.id;
+    } else {
+        articleId = event.target.dataset.id;
+    }
+    console.log(articleId);
+    switch (articleId){
+        case "1":
+            location.href = "docs/Ruedas2002.pdf";
+            break;
+        case "2":
+            location.href = "docs/Ruedas2003.pdf";
+            break;
+        case "3":
+            location.href = "docs/Ruedas2004.pdf";
+            break;
+        case "4":
+            location.href = "docs/Ruedas2011.pdf";
+            break;
+        case "5":
+            location.href = "docs/Ruedas2013.pdf";
+            break;
+    }
+}));

@@ -9,6 +9,28 @@ div.sub-topic h2 {
     margin: auto;
 }
 
+.publication-icons {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.download-icon {
+    display: flex;
+    width: 82px;
+    height: 72px;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid #fff;
+    border-radius: 11px;
+    background: #3D4636;
+    box-shadow: 0 3px 4px 0 #ffffff, 0 -3px 7px 0 rgba(240, 231, 231, 0.90);
+    cursor: pointer;
+    opacity: 0;
+    transition: all ease 0.7s;
+}
+
 @media screen and (max-width: 600px){
     div.sub-topic h2 {
         max-width: 95%;

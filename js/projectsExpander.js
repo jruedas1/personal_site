@@ -23,11 +23,10 @@ const expandSection = event => {
     * accommodate the icon
     * we also move the icon down to ony 1 rem from the bottom
     * */
-    console.log(wrappingDiv.scrollHeight);
-    console.log(window.innerHeight);
-    console.log((wrappingDiv.scrollHeight / window.innerHeight) * 100 + 'dvh');
-    console.log(getDefaultFontSize());
-    wrappingDiv.style.height = ((wrappingDiv.scrollHeight / window.innerHeight).toFixed(1) * 100) + (getDefaultFontSize() / wrappingDiv.scrollHeight * 300) + 'dvh';
+
+    const defaultFontSizeInDVH = getDefaultFontSize() / window.innerHeight * 100;
+
+    wrappingDiv.style.height = ((wrappingDiv.scrollHeight / window.innerHeight) * 100) + defaultFontSizeInDVH*3 + 'dvh';
     event.target.style.bottom = "1rem";
     contentDiv.classList.remove("opacityGradient");
     event.target.src = "img/close.svg";
